@@ -1,0 +1,14 @@
+.app-footer {
+  background-color: var(--nav-bg-color); /* Même couleur que le header */
+  color: var(--text-secondary-color);
+  padding: 20px 40px;
+  text-align: center;
+  margin-top: 40px; /* Espace au-dessus du footer */
+  border-top: 1px solid var(--border-color);
+  font-size: 0.9em;
+}
+
+.app-footer p {
+  margin: 0; /* Enlever la marge par défaut du p */
+  color: var(--text-secondary-color); /* Assurer la couleur */
+} 

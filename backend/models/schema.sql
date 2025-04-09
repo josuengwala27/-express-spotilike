@@ -1,0 +1,67 @@
+-- Création de la base de données
+CREATE DATABASE IF NOT EXISTS spotilike;
+USE spotilike;
+
+-- Table des utilisateurs
+CREATE TABLE IF NOT EXISTS users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  username VARCHAR(50) NOT NULL UNIQUE,
+  email VARCHAR(100) NOT NULL UNIQUE,
+  password VARCHAR(255) NOT NULL,
+  role ENUM('user', 'admin') DEFAULT 'user',
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- Table des artistes
+CREATE TABLE IF NOT EXISTS artists (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nom VARCHAR(100) NOT NULL,
+  avatar VARCHAR(255),
+  biographie TEXT,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- Table des albums
+CREATE TABLE IF NOT EXISTS albums (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  titre VARCHAR(100) NOT NULL,
+  pochette VARCHAR(255),
+  date_sortie DATE,
+  artiste_id INT NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  FOREIGN KEY (artiste_id) REFERENCES artists(id) ON DELETE CASCADE
+);
+
+-- Table des genres
+CREATE TABLE IF NOT EXISTS genres (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  titre VARCHAR(50) NOT NULL UNIQUE,
+  description TEXT,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- Table des morceaux
+CREATE TABLE IF NOT EXISTS songs (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  titre VARCHAR(100) NOT NULL,
+  duree INT NOT NULL, -- Durée en secondes
+  artiste_id INT NOT NULL,
+  album_id INT,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  FOREIGN KEY (artiste_id) REFERENCES artists(id) ON DELETE CASCADE,
+  FOREIGN KEY (album_id) REFERENCES albums(id) ON DELETE SET NULL
+);
+
+-- Table de liaison entre morceaux et genres (relation N-N)
+CREATE TABLE IF NOT EXISTS song_genre (
+  song_id INT NOT NULL,
+  genre_id INT NOT NULL,
+  PRIMARY KEY (song_id, genre_id),
+  FOREIGN KEY (song_id) REFERENCES songs(id) ON DELETE CASCADE,
+  FOREIGN KEY (genre_id) REFERENCES genres(id) ON DELETE CASCADE
+); 

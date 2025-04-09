@@ -1,0 +1,54 @@
+.card {
+  background-color: var(--card-bg-color);
+  border-radius: 8px;
+  overflow: hidden; /* Pour que le border-radius s'applique à l'image */
+  transition: background-color 0.2s ease-in-out;
+  border: 1px solid var(--border-color);
+  display: flex; /* Permet à Link de prendre toute la place */
+  flex-direction: column;
+}
+
+.card:hover {
+  background-color: #282828;
+}
+
+.card a {
+  text-decoration: none;
+  color: inherit; /* Hérite la couleur du texte du parent */
+  display: block; /* S'assure que le lien remplit la carte */
+  height: 100%;
+}
+
+.card-image {
+  width: 100%;
+  height: 180px; /* Hauteur fixe pour l'image */
+  object-fit: cover; /* Recadre l'image pour remplir l'espace */
+  display: block; /* Enlève l'espace en dessous de l'image */
+}
+
+.artist-avatar {
+  border-radius: 50%; /* Rend l'avatar rond */
+  width: 150px; /* Taille fixe pour l'avatar */
+  height: 150px;
+  margin: 15px auto 0; /* Centrer l'avatar */
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-title {
+  color: var(--text-color);
+  font-size: 1.1em;
+  font-weight: bold;
+  margin: 0 0 5px 0; /* Enlever marge par défaut et ajouter en bas */
+  white-space: nowrap; /* Empêche le retour à la ligne */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Ajoute ... si le titre est trop long */
+}
+
+.card-subtitle {
+  color: var(--text-secondary-color);
+  font-size: 0.9em;
+  margin: 0;
+} 

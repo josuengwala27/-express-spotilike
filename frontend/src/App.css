@@ -1,0 +1,255 @@
+#root {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  min-height: 100vh;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Style de la barre de navigation */
+nav {
+  background-color: var(--nav-bg-color);
+  padding: 10px 40px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav ul li a,
+nav ul li span {
+  color: var(--text-secondary-color);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s ease-in-out;
+}
+
+nav ul li a:hover {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.logout-button {
+  background-color: transparent;
+  color: var(--text-secondary-color);
+  border: 1px solid var(--text-secondary-color);
+  padding: 5px 15px;
+  font-size: 0.9em;
+  border-radius: 500px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.logout-button:hover {
+  background-color: var(--text-secondary-color);
+  color: var(--nav-bg-color);
+  border-color: var(--text-secondary-color);
+  transform: scale(1.05);
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Style du footer */
+footer {
+  background-color: var(--nav-bg-color);
+  padding: 20px 40px;
+  text-align: center;
+  border-top: 1px solid var(--border-color);
+  margin-top: auto;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Style pour la grille de cartes */
+.grid-container {
+  display: grid;
+  /* Ajustez le nombre de colonnes et l'espacement selon vos préférences */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+  gap: 20px; /* Espacement entre les cartes */
+}
+
+/* Enlever le style de base de <li> car on utilise des cartes */
+li {
+  background-color: transparent; /* Ou hériter si besoin */
+  padding: 0;
+  margin-bottom: 0;
+  border: none;
+}
+
+li:hover {
+ background-color: transparent; /* Pas d'effet de survol sur li */
+}
+
+li a {
+  /* Styles spécifiques aux liens dans les li supprimés car gérés par Card.css */
+}
+
+/* Style pour les indicateurs de chargement */
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  font-size: 1.2em;
+  color: var(--text-secondary-color);
+}
+
+/* Style pour les messages d'erreur */
+.error-message {
+  color: #f44336; /* Rouge pour les erreurs */
+  background-color: rgba(244, 67, 54, 0.1);
+  padding: 15px;
+  border-radius: 4px;
+  border: 1px solid rgba(244, 67, 54, 0.3);
+  text-align: center;
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+form fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Style pour les conteneurs de formulaire d'authentification */
+.auth-form-container {
+  max-width: 400px; /* Limiter la largeur du formulaire */
+  margin: 40px auto; /* Centrer avec marge */
+  padding: 30px;
+  background-color: var(--card-bg-color);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.auth-form-container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.auth-form-container button {
+  width: 100%; /* Bouton pleine largeur */
+  margin-top: 10px;
+}
+
+/* Styles pour les pages de détail */
+.detail-page-header {
+  display: flex;
+  align-items: flex-end; /* Aligner en bas pour titre à côté de l'image */
+  gap: 30px; /* Espace entre image et texte */
+  margin-bottom: 30px;
+}
+
+.detail-page-header img {
+  /* Styles gérés directement dans le composant pour la taille max */
+  object-fit: cover;
+  /* Ajouter une ombre douce ? */
+  /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); */
+}
+
+.detail-page-info h1 {
+  margin-bottom: 10px;
+}
+
+.detail-page-info p {
+  margin-bottom: 5px;
+  color: var(--text-secondary-color);
+}
+
+.detail-page-songs h2 {
+  margin-top: 40px;
+  border-top: 1px solid var(--border-color);
+  padding-top: 30px;
+}
+
+.detail-page-songs ul {
+  /* La grille n'est pas forcément adaptée ici, gardons ul */
+}
+
+.detail-page-songs li {
+  background-color: transparent; /* Pas de fond carte pour les chansons */
+  border: none;
+  border-bottom: 1px solid var(--border-color);
+  padding: 10px 0;
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+.detail-page-songs li:hover {
+  background-color: rgba(255, 255, 255, 0.05); /* Léger survol */
+}
+
+.detail-page-songs li div {
+  /* Style pour les genres dans la liste de chansons */
+  font-size: 0.85em;
+  color: var(--text-secondary-color);
+  margin-top: 3px;
+}
