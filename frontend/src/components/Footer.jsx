@@ -6,7 +6,7 @@ function Footer() {
 
   return (
     <footer className="app-footer">
-      <p>&copy; {currentYear} Spotilike - Créé par Jean Josue NGWALA MAYALA et Anis HAMMICH</p>
+      <p>&copy; {currentYear} Spotilike - Créé par Jean Josue NGWALA MAYALA et Anis HAMICH</p>
       {}
     </footer>
   );

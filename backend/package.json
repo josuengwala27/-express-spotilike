@@ -14,7 +14,7 @@
     "jwt",
     "api"
   ],
-  "author": "Jean Josue NGWALA MAYALA et Anis HAMMICH",
+  "author": "Jean Josue NGWALA MAYALA et Anis HAMICH",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",

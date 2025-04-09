@@ -150,4 +150,4 @@ Pour tester l'API, vous pouvez utiliser la collection Postman fournie dans [docs
 ## Auteurs
 
 - Jean Josue NGWALA MAYALA
-- Anis HAMMICH 
+- Anis HAMICH 
