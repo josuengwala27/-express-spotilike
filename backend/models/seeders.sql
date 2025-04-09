@@ -8,18 +8,18 @@ INSERT INTO users (username, email, password, role) VALUES
 
 -- Insertion des artistes
 INSERT INTO artists (nom, avatar, biographie) VALUES
-('Ed Sheeran', 'https://upload.wikimedia.org/wikipedia/commons/4/45/Ed_Sheeran_2018.jpg', 'Edward Christopher Sheeran MBE est un auteur-compositeur-interprète et guitariste britannique.'),
-('Adele', 'https://upload.wikimedia.org/wikipedia/commons/6/6f/Adele_2016.jpg', 'Adele Laurie Blue Adkins est une auteure-compositrice-interprète britannique.'),
-('The Weeknd', 'https://upload.wikimedia.org/wikipedia/commons/f/f4/The_Weeknd_2021.jpg', 'Abel Makkonen Tesfaye, connu sous le nom de scène The Weeknd, est un auteur-compositeur-interprète canadien.'),
-('Taylor Swift', 'https://upload.wikimedia.org/wikipedia/commons/f/f2/Taylor_Swift_2_-_2019_by_Glenn_Francis.jpg', 'Taylor Alison Swift est une auteure-compositrice-interprète américaine.'),
+('Ed Sheeran', 'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQ4cEsGlN6D1PMXHQO2Z9_N-iRj2rP9DXaX-htKUoKpERimUphV', 'Edward Christopher Sheeran MBE est un auteur-compositeur-interprète et guitariste britannique.'),
+('Adele', 'https://gonzomusic.fr/files/Adele_-_25_Official_Album_Cover.png', 'Adele Laurie Blue Adkins est une auteure-compositrice-interprète britannique.'),
+('The Weeknd', 'https://i.scdn.co/image/ab6761610000e5eb9e528993a2820267b97f6aae', 'Abel Makkonen Tesfaye, connu sous le nom de scène The Weeknd, est un auteur-compositeur-interprète canadien.'),
+('Taylor Swift', 'https://geneacdn.net/bundles/geneanetgeneastar/images/celebrites/200px/tayloralisonswiftt.jpg', 'Taylor Alison Swift est une auteure-compositrice-interprète américaine.'),
 ('Drake', 'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQLNbKDxF3yijWziz421m1Hpg6rbq2Mtf6j_Hx21fL6y2UNSnBog2umugkepjf6y871K1OVof0ovmZm7PqSfISMnw', 'Aubrey Drake Graham est un rappeur, chanteur, acteur et entrepreneur canadien.');
 
 
 -- Insertion des albums
 INSERT INTO albums (titre, pochette, date_sortie, artiste_id) VALUES
 ('÷ (Divide)', 'https://upload.wikimedia.org/wikipedia/en/4/45/Divide_cover.png', '2017-03-03', 1),
-('25', 'https://upload.wikimedia.org/wikipedia/en/1/1b/Adele_-_25_%28Official_Album_Cover%29.png', '2015-11-20', 2),
-('After Hours', 'https://upload.wikimedia.org/wikipedia/en/5/5e/The_Weeknd_-_After_Hours.png', '2020-03-20', 3),
+('25', 'https://static.bax-shop.es/image/product/241085/542016/d8aad011/450x450/1454487766adele-25.jpg', '2015-11-20', 2),
+('After Hours', 'https://static.fnac-static.com/multimedia/Images/FR/NR/64/e5/a8/11068772/1540-1/tsp20200611121920/After-Hours.jpg', '2020-03-20', 3),
 ('Folklore', 'https://upload.wikimedia.org/wikipedia/en/f/f8/Taylor_Swift_-_Folklore.png', '2020-07-24', 4),
 ('Scorpion', 'https://upload.wikimedia.org/wikipedia/en/9/90/Scorpion_by_Drake.jpg', '2018-06-29', 5);
 

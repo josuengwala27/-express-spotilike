@@ -13,8 +13,8 @@ function AlbumCard({ album }) {
         <img src={imageUrl} alt={`Pochette de ${album.titre}`} className="card-image" />
         <div className="card-body">
           <h3 className="card-title">{album.titre}</h3>
-          {/* On pourrait ajouter le nom de l'artiste si l'API le renvoyait ici */} 
-          {/* <p className="card-subtitle">Artiste ID: {album.artiste_id}</p> */}
+          {} 
+          {}
         </div>
       </Link>
     </div>
